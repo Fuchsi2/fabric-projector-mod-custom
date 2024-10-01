@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "projector",
+  "id": "projector-custom",
   "version": "${version}",
 
-  "name": "Projector",
+  "name": "Projector-custom",
   "description": "Projector mod allows you to load images from the internet and set them to blocks",
   "authors": [
     "Nic Jackson",

@@ -35,7 +35,7 @@ public class ProjectorMod implements ModInitializer {
   public static final Identifier DISPLAY_ID = identifier("display");
   public static final Identifier PLACEHOLDER_TEXTURE = identifier("textures/block/display_placeholder.png");
 
-  public static final Block DISPLAY = new Display(FabricBlockSettings.create().strength(4.0f).nonOpaque().solid());
+  public static final Block DISPLAY = new Display(FabricBlockSettings.create().strength(3.0f).nonOpaque().solid().requiresTool());
 
   public static final Item REMOTE_ITEM = new Remote(new Item.Settings());
   public static final Item DISPLAY_ITEM = new BlockItem(DISPLAY, new Item.Settings());
@@ -52,7 +52,7 @@ public class ProjectorMod implements ModInitializer {
     Registry.register(Registries.ITEM, DISPLAY_ID, DISPLAY_ITEM);
     Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
         .icon(() -> new ItemStack(DISPLAY))
-        .displayName(Text.translatable("projector.display"))
+        .displayName(Text.translatable("itemGroup.projector.general"))
         .build());
 
     REMOTE = Registry.register(Registries.ITEM, REMOTE_ID, REMOTE_ITEM);
